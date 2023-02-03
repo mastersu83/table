@@ -1,0 +1,24 @@
+.tableItem {
+  display: grid;
+  gap: 7px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 1px;
+  &__number {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  &__name {
+    text-align: left;
+  }
+  &__grayBg {
+    background-color: #eff0f8;
+  }
+}
+.statistic {
+  grid-template-columns: max-content 70px repeat(9, 1fr);
+}
+.actions {
+  grid-template-columns: max-content 70px repeat(8, 1fr);
+}
