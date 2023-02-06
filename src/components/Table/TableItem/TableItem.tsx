@@ -23,13 +23,15 @@ const TableItem: FC<{
           <span>
             {item.actions}/{item.luckyActions}
           </span>
-          <div>
+          <div className={styles.tableItem__shots}>
             <span>
               {item.shots}/{item.shotsOnTarget}
             </span>
-            <span className={styles.shots__percent}>
-              {" "}
-              {Math.round((item.shotsOnTarget / item.shots) * 100)}%
+            <span className={styles.percent}>
+              {item.shots === 0
+                ? 0
+                : Math.round((item.shotsOnTarget / item.shots) * 100)}
+              %
             </span>
           </div>
           <span>{item.coefficient}</span>

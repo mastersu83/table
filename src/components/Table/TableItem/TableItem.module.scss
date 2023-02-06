@@ -17,9 +17,12 @@
   &__grayBg {
     background-color: #eff0f8;
   }
-  .shots__percent {
-    color: #929292;
-    justify-self: right;
+  &__shots {
+    width: 40px;
+    .percent {
+      margin-left: 5px;
+      color: #929292;
+    }
   }
 }
 .statistic {
