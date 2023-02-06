@@ -27,7 +27,10 @@ const TableItem: FC<{
             <span>
               {item.shots}/{item.shotsOnTarget}
             </span>
-            <span>0%</span>
+            <span className={styles.shots__percent}>
+              {" "}
+              {Math.round((item.shotsOnTarget / item.shots) * 100)}%
+            </span>
           </div>
           <span>{item.coefficient}</span>
           <span>

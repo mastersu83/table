@@ -2,6 +2,7 @@
   display: grid;
   gap: 7px;
   align-items: center;
+  justify-items: center;
   border-bottom: 1px solid gray;
   padding: 1px;
   &__number {
@@ -11,9 +12,14 @@
   }
   &__name {
     text-align: left;
+    justify-self: left;
   }
   &__grayBg {
     background-color: #eff0f8;
+  }
+  .shots__percent {
+    color: #929292;
+    justify-self: right;
   }
 }
 .statistic {

@@ -44,7 +44,7 @@ export const TABLE_DATA1: ITableData = {
       goalsPass: 1,
       actions: 6,
       luckyActions: 3,
-      shots: 5,
+      shots: 7,
       shotsOnTarget: 2,
       coefficient: 0.2,
       fouls: 5,

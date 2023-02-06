@@ -22,16 +22,26 @@
     &__titleBox {
       display: grid;
       gap: 7px;
-      align-items: center;
+      align-items: end;
+      justify-items: center;
       border-bottom: 1px solid gray;
+      padding: 2px 0;
       color: #929292;
+      span {
+        justify-self: center;
+        text-align: center;
+        &:first-child {
+          justify-self: start;
+          text-align: left;
+        }
+      }
     }
   }
 }
 
 .statistic {
-  grid-template-columns: 90px repeat(9, 25px);
+  grid-template-columns: 90px repeat(9, 1fr);
 }
 .actions {
-  grid-template-columns: 90px repeat(8, 30px);
+  grid-template-columns: 90px repeat(8, 1fr);
 }
