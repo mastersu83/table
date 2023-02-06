@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import styles from "./TableItem.module.scss";
 import { ITableItemData } from "../../../interfaces/tableData.interface";
 
@@ -7,81 +7,54 @@ const TableItem: FC<{
   bg: boolean;
   statistic?: boolean;
 }> = ({ item, bg, statistic }) => {
-  const {
-    actions,
-    luckyActions,
-    fouls,
-    foulsOn,
-    goals,
-    goalsPass,
-    minutes,
-    name,
-    coefficient,
-    offsides,
-    redCard,
-    yellowCard,
-    shots,
-    shotsOnTarget,
-    number,
-    loss,
-    lossOnOwn,
-    actionsOnPenalty,
-    returnBallOpponentHalf,
-    returnBall,
-    poorBall,
-    scoringChancesComplete,
-    scoringChancesCreate,
-    scoringChances,
-  } = item;
-
   return (
     <div
       className={`${styles.tableItem} ${bg ? styles.tableItem__grayBg : ""} ${
         statistic ? styles.statistic : styles.actions
       }`}
     >
-      <span className={styles.tableItem__number}>{number}</span>
-      <span className={styles.tableItem__name}>{name}</span>
-      <span>{minutes}'</span>
+      <span className={styles.tableItem__number}>{item.number}</span>
+      <span className={styles.tableItem__name}>{item.name}</span>
+      <span>{item.minutes}'</span>
       {statistic ? (
         <>
-          <span>{goals}</span>
-          <span>{goalsPass}</span>
+          <span>{item.goals}</span>
+          <span>{item.goalsPass}</span>
           <span>
-            {actions}/{luckyActions}
+            {item.actions}/{item.luckyActions}
           </span>
           <div>
             <span>
-              {shots}/{shotsOnTarget}
+              {item.shots}/{item.shotsOnTarget}
             </span>
             <span>0%</span>
           </div>
-          <span>{coefficient}</span>
+          <span>{item.coefficient}</span>
           <span>
-            {fouls}/{foulsOn}
+            {item.fouls}/{item.foulsOn}
           </span>
-          <span>{offsides}</span>
+          <span>{item.offsides}</span>
           {statistic && (
             <span>
-              {yellowCard}/{redCard}
+              {item.yellowCard}/{item.redCard}
             </span>
           )}
         </>
       ) : (
         <>
-          <span>{actions}</span>
-          <span>{actionsOnPenalty}</span>
+          <span>{item.actions}</span>
+          <span>{item.actionsOnPenalty}</span>
           <span>
-            {scoringChances}/{scoringChancesComplete}
+            {item.scoringChances}/{item.scoringChancesComplete}
           </span>
-          <span>{scoringChancesCreate}</span>
+          <span>{item.scoringChancesCreate}</span>
           <span>
-            {loss}/{lossOnOwn}
+            {item.loss}/{item.lossOnOwn}
           </span>
           <span>
-            {returnBall}/{returnBallOpponentHalf}
+            {item.returnBall}/{item.returnBallOpponentHalf}
           </span>
-          <span>{poorBall}</span>
+          <span>{item.poorBall}</span>
         </>
       )}
     </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import team1logo from "../../assets/team1logo.png";
 import team2logo from "../../assets/team2logo.png";
 import smallLogo1 from "../../assets/smallLogo1.png";

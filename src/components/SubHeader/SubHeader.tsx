@@ -1,4 +1,3 @@
-import React from "react";
 import staticLogo1 from "../../assets/staticLogo1.png";
 import staticLogo2 from "../../assets/staticLogo2.png";
 import styles from "./SubHeader.module.scss";
